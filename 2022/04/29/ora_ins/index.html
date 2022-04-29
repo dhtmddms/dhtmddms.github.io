@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>오라클 설치 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="오라클 설치오라클 설치 오라클 데이터베이스 다운로드 (19c 버전)  : https:&amp;#x2F;&amp;#x2F;www.oracle.com&amp;#x2F;kr&amp;#x2F;database&amp;#x2F;technologies&amp;#x2F;oracle19c-windows-downloads.html  다운받은 오라클 데이터베이스 파일 (WINDOWS.X64_193000_db_home) 압축을 푼다 압축 푼 파일 → data → setup"><meta property="og:type" content="blog"><meta property="og:title" content="오라클 설치"><meta property="og:url" content="http://dhtmddms.github.io/2022/04/29/ora_ins/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="오라클 설치오라클 설치 오라클 데이터베이스 다운로드 (19c 버전)  : https:&amp;#x2F;&amp;#x2F;www.oracle.com&amp;#x2F;kr&amp;#x2F;database&amp;#x2F;technologies&amp;#x2F;oracle19c-windows-downloads.html  다운받은 오라클 데이터베이스 파일 (WINDOWS.X64_193000_db_home) 압축을 푼다 압축 푼 파일 → data → setup"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://dhtmddms.github.io/images/oracle/Untitled.png"><meta property="article:published_time" content="2022-04-29T12:35:00.000Z"><meta property="article:modified_time" content="2022-04-29T12:39:20.904Z"><meta property="article:author" content="Oh seungeun"><meta property="article:tag" content="oracle"><meta property="article:tag" content="sql"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/oracle/Untitled.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://dhtmddms.github.io/2022/04/29/ora_ins/"},"headline":"오라클 설치","image":["http://dhtmddms.github.io/images/oracle/Untitled.png"],"datePublished":"2022-04-29T12:35:00.000Z","dateModified":"2022-04-29T12:39:20.904Z","author":{"@type":"Person","name":"Oh seungeun"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://dhtmddms.github.io/img/logo.svg"}},"description":"오라클 설치오라클 설치 오라클 데이터베이스 다운로드 (19c 버전)  : https:&#x2F;&#x2F;www.oracle.com&#x2F;kr&#x2F;database&#x2F;technologies&#x2F;oracle19c-windows-downloads.html  다운받은 오라클 데이터베이스 파일 (WINDOWS.X64_193000_db_home) 압축을 푼다 압축 푼 파일 → data → setup"}</script><link rel="canonical" href="http://dhtmddms.github.io/2022/04/29/ora_ins/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-04-29T12:35:00.000Z" title="2022. 4. 29. 오후 9:35:00">2022-04-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-29T12:39:20.904Z" title="2022. 4. 29. 오후 9:39:20">2022-04-29</time></span><span class="level-item"> Oh seungeun </span><span class="level-item"><a class="link-muted" href="/categories/oracle/">oracle</a></span><span class="level-item">7 minutes read (About 1018 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">오라클 설치</h1><div class="content"><h1 id="오라클-설치"><a href="#오라클-설치" class="headerlink" title="오라클 설치"></a>오라클 설치</h1><h3 id="오라클-설치-1"><a href="#오라클-설치-1" class="headerlink" title="오라클 설치"></a>오라클 설치</h3><ul>
+<li>오라클 데이터베이스 다운로드 (19c 버전)</li>
+</ul>
+<p>: <a target="_blank" rel="noopener" href="https://www.oracle.com/kr/database/technologies/oracle19c-windows-downloads.html">https://www.oracle.com/kr/database/technologies/oracle19c-windows-downloads.html</a></p>
+<ul>
+<li>다운받은 오라클 데이터베이스 파일 (WINDOWS.X64_193000_db_home) 압축을 푼다</li>
+<li>압축 푼 파일 → data → setup.exe 우클릭 → 관리자 권한으로 실행후 다음과 같이 선택해준다<ul>
+<li>오라클 SQL과 PL&#x2F;SQL을 다루는 기술 교재 20-22p 참고</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/oracle/Untitled.png"></p>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 1.png)</p>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 2.png)</p>
+<p>→ 전역 데이터 베이스 이름 : myoracle, 비번 : 1234, ‘컨테이너 데이터베이스로 생성’ 옵션 해제</p>
+<ul>
+<li>설치하려는데 다음과 같은 오류 발생 - 일단 창 닫으니 설치가 진행되고 완료가 되었음</li>
+</ul>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 3.png)</p>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 4.png)</p>
+<ul>
+<li>설치가 끝났으면 SQL Plus로 들어간다 (관리자 권한으로 실행)</li>
+<li>테이블스페이스를 생성해준다 (oradata-MYORACLE이 있는 경로를 확인한다 → 나의 경우sql_lecture에 있음)</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">CREATE</span> <span class="variable constant_">TABLESPACE</span> myts <span class="variable constant_">DATAFILE</span> <span class="string">&#x27;C:\sql_lecture\oradata\MYORACLE\myts.dbf&#x27;</span> <span class="variable constant_">SIZE</span> 100M <span class="variable constant_">AUTOEXTEND</span> <span class="variable constant_">ON</span> <span class="variable constant_">NEXT</span> 5M;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>그 다음 사용자를 생성한다 (여기서 ‘ohse’는 내 이름의 이니셜이다)</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">CREATE</span> <span class="variable constant_">USER</span> ora_user <span class="variable constant_">IDENTIFIED</span> <span class="variable constant_">BY</span> ohse <span class="variable constant_">DEFAULT</span> <span class="variable constant_">TABLESPACE</span> <span class="variable constant_">MYTS</span> <span class="variable constant_">TEMPORARY</span> <span class="variable constant_">TABLESPACE</span> <span class="variable constant_">TEMP</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>롤을 부여한다</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">GRANT</span> <span class="variable constant_">DBA</span> <span class="variable constant_">TO</span> ora_user;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>사용자 계정의 로 DB에 접속하기<ul>
+<li>연결을 먼저 해준다</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect ora_user/ohse;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>접속후 ‘select user from dual;’ 을 입력하면 현재 로그인한 사용자 이름이 출력된다<ul>
+<li>여기까지 완료되면 테이블 스페이스와 사용자가 제대로 생성된 것</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="SQL-Developer-설치"><a href="#SQL-Developer-설치" class="headerlink" title="SQL Developer 설치"></a>SQL Developer 설치</h3><pre><code>  : [https://www.oracle.com/tools/downloads/sqldev-downloads.html](https://www.oracle.com/tools/downloads/sqldev-downloads.html)
+</code></pre>
+<ul>
+<li>설치 후 압축을 푼다</li>
+<li>파일로 들어가 sqldeveloper 응용프로그램을 관리자 권한으로 실행</li>
+<li>파일 → 새 파일 만들기 → 아래와 같이 입력 후 test 시행<ul>
+<li>이 때 사용자 이름은 위에서 IDENTIFIED에 입력한 ora_user를 입력하고 비밀번호는 1234가 아니라 ohse를 입력하니까 실행되었음</li>
+</ul>
+</li>
+</ul>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 5.png)</p>
+<ul>
+<li><p>테스트가 성공했으면 &lt;접속&gt;을 클릭 (혹은 &lt;접속&gt; 버튼이 없으면&lt;저장&gt; 후 접속하면 됨)</p>
+</li>
+<li><p>도구 → 환경설정 → 시간 기록 형식 (P)에 YYYY&#x2F;MM&#x2F;DD HH24:MI:SS로 바꾼다</p>
+</li>
+<li><p>질의 입력창에 SELECT user from DUAL;을 실행하고 ora_user가 뜨는지 확인해본다</p>
+</li>
+<li><p>c드라이브에 backup 폴더를 생성하고 expall.dmp와 expcust.dmp 파일을 넣어준다</p>
+<pre><code>파일 다운로드 링크 : [https://github.com/gilbutITbook/006696/blob/master/01장 환경설정/](https://github.com/gilbutITbook/006696/tree/master/01%EC%9E%A5%20%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95)
+</code></pre>
+</li>
+<li><p>cmd(명령어 프롬프트)를 열고 경로를 backup 폴더로 잡아준다(cd 이용)</p>
+</li>
+<li><p>아래 코드 입력</p>
+<ul>
+<li>imp ora_user&#x2F;ohse file&#x3D;expall.dmp log&#x3D;empall.log ignore&#x3D;y grants&#x3D;y rows&#x3D;y indexes&#x3D;y full&#x3D;y</li>
+<li>imp ora_user&#x2F;ohse file&#x3D;expcust.dmp log&#x3D;expcust.log ignore&#x3D;y grants&#x3D;y rows&#x3D;y indexes&#x3D;y full&#x3D;y</li>
+</ul>
+</li>
+<li><p>SQL Developer 질의 입력 창에 ‘SELECT table_name FROM user_tables;’ 입력후 정상적으로 실행되는 지 확인</p>
+</li>
+</ul>
+<p>![](&#x2F;images&#x2F;oracle&#x2F;Untitled 6.png)</p>
+<hr>
+<h3 id="오라클-삭제"><a href="#오라클-삭제" class="headerlink" title="오라클 삭제"></a>오라클 삭제</h3><ul>
+<li>설치과정에 오류가 발생했을 때, 제일 좋은 해결책은 삭제하고 다시 설치하는 것!</li>
+<li>우선 오라클 서비스를 중시 시킨다<ul>
+<li>[제어판] → [시스템 및 보안] →[관리도구] → [서비스] 메뉴를 실행해 Oracle로 시작되는 모든 서비스를 중지시킨다</li>
+</ul>
+</li>
+<li>삭제 파일시동하기<ul>
+<li>오라클 메인 폴더로 가서 (나의 경우 c드라이브-sql_lecture) [deinstall.bat] 파일을 관리자 권한으로 실행한다</li>
+</ul>
+</li>
+<li>삭제 진행하기<ul>
+<li>Oracle 홈에 구성된 데이터베이스 이름목록을 지정하라고 나오는데 [MYORACLE]을 입력하고 엔터를 누른다</li>
+</ul>
+</li>
+<li>삭제 확인하기<ul>
+<li>오라클 메인 폴더로 가서 파일이 남아 있는지 확인하고, 남아있다면 삭제한다</li>
+</ul>
+</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>오라클 설치</p><p><a href="http://dhtmddms.github.io/2022/04/29/ora_ins/">http://dhtmddms.github.io/2022/04/29/ora_ins/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Oh seungeun</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-04-29</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-04-29</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/oracle/">oracle</a><a class="link-muted mr-2" rel="tag" href="/tags/sql/">sql</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/04/29/hello-world/"><span class="level-item">Hello World</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Category</p><a href="/categories"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">2</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/oracle/"><span class="level-start"><span class="level-item">oracle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-29T12:35:00.000Z">2022-04-29</time></p><p class="title"><a href="/2022/04/29/ora_ins/">오라클 설치</a></p><p class="categories"><a href="/categories/oracle/">oracle</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-29T12:03:32.322Z">2022-04-29</time></p><p class="title"><a href="/2022/04/29/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/oracle/"><span class="tag">oracle</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sql/"><span class="tag">sql</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 Oh seungeun</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
