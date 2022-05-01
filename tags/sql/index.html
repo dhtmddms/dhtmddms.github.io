@@ -1,5 +1,590 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Tag: sql - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://dhtmddms.github.io/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://dhtmddms.github.io/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://dhtmddms.github.io"},"headline":"Hexo","image":["http://dhtmddms.github.io/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://dhtmddms.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">sql</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-04-29T12:35:00.000Z" title="2022. 4. 29. 오후 9:35:00">2022-04-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-29T12:43:06.859Z" title="2022. 4. 29. 오후 9:43:06">2022-04-29</time></span><span class="level-item"> Oh seungeun </span><span class="level-item"><a class="link-muted" href="/categories/oracle/">oracle</a></span><span class="level-item">7 minutes read (About 1018 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/29/ora_ins/">오라클 설치</a></h1><div class="content"><h1 id="오라클-설치"><a href="#오라클-설치" class="headerlink" title="오라클 설치"></a>오라클 설치</h1><h3 id="오라클-설치-1"><a href="#오라클-설치-1" class="headerlink" title="오라클 설치"></a>오라클 설치</h3><ul>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Tag: sql - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://dhtmddms.github.io/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://dhtmddms.github.io/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://dhtmddms.github.io"},"headline":"Hexo","image":["http://dhtmddms.github.io/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://dhtmddms.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">sql</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-05-01T14:11:00.000Z" title="2022. 5. 1. 오후 11:11:00">2022-05-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-05-01T15:20:57.199Z" title="2022. 5. 2. 오전 12:20:57">2022-05-02</time></span><span class="level-item"> Oh seungeun </span><span class="level-item"><a class="link-muted" href="/categories/oracle/">oracle</a></span><span class="level-item">35 minutes read (About 5299 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/05/01/SQL_basic/">SQL basic</a></h1><div class="content"><h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="SELECT문"><a href="#SELECT문" class="headerlink" title="SELECT문"></a>SELECT문</h2><ul>
+<li><p>기본 구조</p>
+<ul>
+<li><strong>SELECT</strong> * 혹은 컬럼  —&gt; 무엇을 가져올껀지</li>
+<li><strong>FROM</strong> 테이블 또는 VIEW  —&gt; 어디서 가져올껀지</li>
+<li><strong>WHERE</strong> 조건  —&gt; 어떻게 가져올껀지</li>
+<li><strong>ORDER BY</strong> 컬럼;</li>
+<li>예시 (교재 3장)</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">	employess_id, emp_name, salary, job_id</span><br><span class="line"><span class="variable constant_">FROM</span> </span><br><span class="line">	employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary &gt; <span class="number">5000</span>;</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> employee_id;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AND와 OR 조건</p>
+<ul>
+<li>WHERE 조건에 AND나 OR의 옵션을 줄 수 있다</li>
+<li>예시</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">	employess_id, emp_name, salary, job_id</span><br><span class="line"><span class="variable constant_">FROM</span> </span><br><span class="line">	employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary &gt; <span class="number">5000</span>;</span><br><span class="line">	<span class="variable constant_">AND</span> job_id =<span class="string">&#x27;IT_PROG&#x27;</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> employee_id; </span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+<li><p>MERGE 문</p>
+<ul>
+<li>조건과 비교하여 값이 있으면 UPDATE &#x2F; 없으면 INSERT를 진행해주는 구문</li>
+<li>코드 실습</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 테이블 만들기 </span><br><span class="line"><span class="variable constant_">INSERT</span> <span class="variable constant_">INTO</span> ex3_3 (employee_id)</span><br><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    e.<span class="property">employee_id</span></span><br><span class="line"><span class="variable constant_">FROM</span> employees e, sales s</span><br><span class="line"><span class="variable constant_">WHERE</span> e.<span class="property">employee_id</span> = s.<span class="property">employee_id</span></span><br><span class="line">    <span class="variable constant_">AND</span> s.<span class="property">SALES_MONTH</span> <span class="variable constant_">BETWEEN</span> <span class="string">&#x27;200010&#x27;</span> <span class="variable constant_">AND</span> <span class="string">&#x27;200012&#x27;</span></span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> e.<span class="property">employee_id</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>(1) 관리자 사번(manager_id)이 146번인 사원을 찾는다.<br>  (2) ex3_3 테이블에 있는 사원의 사번과 일치하면 보너스 금액에 자신의 급여의 1%를 보너스로 갱신<br>  (3) ex3_3 테이블에 있는 사원의 사번과 일치하지 않으면 (1)의 결과의 사원을 신규로 입력(이 때 보너스 금액은 급여의 0.1%<br>  (4) 이 때 급여가 8000미만인 사원만 처리해보자.</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> employee_id, manager_id, salary, salary * <span class="number">0.01</span></span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> employee_id <span class="variable constant_">IN</span> (<span class="variable constant_">SELECT</span> employee_id <span class="variable constant_">FROM</span> ex3_3);</span><br><span class="line"></span><br><span class="line"># ex3_3 테이블에 있는 사원의 사번, 관리자 사번, 급여, 급여*<span class="number">0.01</span>을 조회한 것</span><br><span class="line"># ex3_3 테이블에서 관리자 사번 <span class="number">146</span>인 사원의 보너스 금액을 급여*<span class="number">0.01</span>로 갱신</span><br></pre></td></tr></table></figure>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> employee_id, manager_id, salary, salary * <span class="number">0.001</span></span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> employee_id <span class="variable constant_">NOT</span> <span class="variable constant_">IN</span> (<span class="variable constant_">SELECT</span> employee_id <span class="variable constant_">FROM</span> ex3_3)</span><br><span class="line">	<span class="variable constant_">AND</span> manager_id = <span class="number">146</span>;</span><br><span class="line"></span><br><span class="line"># 사원 테이블에서 관리자 사번이 <span class="number">146</span>인 것 중 ex3_3 테이블에 없는 사원의 사번, 관리자 사번 급여, 급여*<span class="number">0.001</span>을 조회한것</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="비교조건식"><a href="#비교조건식" class="headerlink" title="비교조건식"></a>비교조건식</h3><ul>
+<li><p>ANY</p>
+<ul>
+<li>OR 의 역할</li>
+<li>급여가 2000 이거나 3000, 4000인 사원을 추출</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    employee_id</span><br><span class="line">    , salary</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary = <span class="title function_">ANY</span>(<span class="number">2000</span>,<span class="number">3000</span>,<span class="number">4000</span>)</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> employee_id;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ALL</p>
+<ul>
+<li>AND 의 역할</li>
+<li>모든 조건을 동시에 만족해야 함</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    employee_id</span><br><span class="line">    , salary</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary = <span class="title function_">ALL</span>(<span class="number">2000</span>,<span class="number">3000</span>,<span class="number">4000</span>)</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> employee_id;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SOME</p>
+<ul>
+<li>ANY 와 같은 동작을 함</li>
+</ul>
+</li>
+</ul>
+<h3 id="논리-조건식"><a href="#논리-조건식" class="headerlink" title="논리 조건식"></a>논리 조건식</h3><ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT<ul>
+<li>조건식이 거짓일 때의 결과를 반환</li>
+</ul>
+</li>
+</ul>
+<h3 id="NULL-조건식"><a href="#NULL-조건식" class="headerlink" title="NULL 조건식"></a>NULL 조건식</h3><ul>
+<li>특정 값이 NULL 인지 여부를 확인함</li>
+<li>등호 연산자를 사용하지 않는다<ul>
+<li>“salary IS NULL” 혹은 “salary IS NOT NULL”</li>
+</ul>
+</li>
+</ul>
+<h3 id="BETWEEN-AND-조건식"><a href="#BETWEEN-AND-조건식" class="headerlink" title="BETWEEN AND 조건식"></a>BETWEEN AND 조건식</h3><ul>
+<li>범위에 해당되는 값을 찾을 때 사용</li>
+<li>‘≥’ 와 ‘≤’ 논리 연산자로 변환이 가능</li>
+</ul>
+<h3 id="IN-조건식"><a href="#IN-조건식" class="headerlink" title="IN 조건식"></a>IN 조건식</h3><ul>
+<li>조건에 포함된 값을 반환</li>
+<li>‘&#x3D;ANY’ 형태로 바꿔 쓸 수 있음</li>
+<li>비교나 등호 연산자 (‘&#x3D;’) 를 쓰지 않음</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    employee_id</span><br><span class="line">    , salary</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary <span class="variable constant_">IN</span> (<span class="number">2000</span>,<span class="number">3000</span>,<span class="number">4000</span>)</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> employee_id;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>NOT IN<ul>
+<li>조건에 포함되지 않은 모든 값을 반환</li>
+<li>마찬가지로 비교나 등호 연산자를 사용하지 않음</li>
+<li>‘&lt;&gt;ALL’ 이랑 같은 동작</li>
+</ul>
+</li>
+</ul>
+<h3 id="EXISTS-조건식"><a href="#EXISTS-조건식" class="headerlink" title="EXISTS 조건식"></a>EXISTS 조건식</h3><ul>
+<li>IN과 비슷한 동작</li>
+<li>서브 쿼리에만 사용 가능</li>
+</ul>
+<h3 id="LIKE-조건식"><a href="#LIKE-조건식" class="headerlink" title="LIKE 조건식"></a>LIKE 조건식</h3><ul>
+<li><p>문자열의 패턴을 검색할 때 사용하는 조건식</p>
+</li>
+<li><p>% 위치에 따라 앞의 문자열에 대한 조건인지 뒤에 문자열에 대한 조건인지가 달라짐</p>
+<ul>
+<li>사원 테이블에 사원 이름이 ‘A’로 시작되는 사원 조회</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> emp_name</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> emp_name <span class="variable constant_">LIKE</span> <span class="string">&#x27;A%&#x27;</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> emp_name;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>‘a’로 끝나는 사원 조회</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> emp_name</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> emp_name <span class="variable constant_">LIKE</span> <span class="string">&#x27;%a&#x27;</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> emp_name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>‘_’ (언더스코어)는 나머지 글자 전체가 아닌 한 글자만 비교</p>
+<ul>
+<li>문자열 세번째가 ‘c’인 사원 조회</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> emp_name</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> emp_name <span class="variable constant_">LIKE</span> <span class="string">&#x27;__c%&#x27;</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> emp_name;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="SQL함수"><a href="#SQL함수" class="headerlink" title="SQL함수"></a>SQL함수</h3><p><strong>숫자함수</strong></p>
+<ul>
+<li><p>ABS</p>
+<ul>
+<li>절댓값 반환 함수</li>
+</ul>
+</li>
+<li><p>ROUND</p>
+<ul>
+<li>소수점 기준 n번째에서 반올림</li>
+<li>소수점 1자리에서 반올림</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    <span class="title function_">ROUND</span>(<span class="number">10.154</span>,<span class="number">1</span>)</span><br><span class="line">    , <span class="title function_">ROUND</span>(-<span class="number">10.154</span>,<span class="number">1</span>)</span><br><span class="line"><span class="variable constant_">FROM</span> <span class="variable constant_">DUAL</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>음수를 지정하면 일의 자리부터 시작하여 반올림 (-1을 지정하면 일의자리, -2를 지정하면 십의 자리에서)</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    <span class="title function_">ROUND</span>(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line">    , <span class="title function_">ROUND</span>(<span class="number">115.155</span>, -<span class="number">1</span>)</span><br><span class="line">    , <span class="title function_">ROUND</span>(<span class="number">115.155</span>, -<span class="number">2</span>)</span><br><span class="line"><span class="variable constant_">FROM</span> <span class="variable constant_">DUAL</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>TRUNC</p>
+<ul>
+<li>절삭 함수</li>
+<li>반올림이 아니라 n번째에서 절삭한다</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    <span class="title function_">TRUNC</span>(<span class="number">115.155</span>)</span><br><span class="line">    ,<span class="title function_">TRUNC</span>(<span class="number">115.155</span>,<span class="number">1</span>)</span><br><span class="line">    ,<span class="title function_">TRUNC</span>(<span class="number">115.155</span>,<span class="number">2</span>)</span><br><span class="line">    ,<span class="title function_">TRUNC</span>(<span class="number">115.155</span>,-<span class="number">2</span>)</span><br><span class="line"><span class="variable constant_">FROM</span> <span class="variable constant_">DUAL</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POWER(n2, n1)  &amp;  SQRT(n)</p>
+<ul>
+<li>제곱과 제곱근 함수</li>
+<li>POWER(3,2) &#x3D; 9 &#x2F; SQRT(9)&#x3D;3</li>
+</ul>
+</li>
+<li><p>MOD, REMAINDER</p>
+<ul>
+<li>MOD는 n2를 n1으로 나눈 나머지 값을 반환</li>
+<li>MOD(19,4) &#x3D; 3</li>
+<li>REMAINDER 또한 n2를 n1으로 나눈 나머지 값을 반환</li>
+<li>내부적으로 계산 방법이 MOD와 약간 다름</li>
+<li>REMAINDER(19, 4) &#x3D; -1</li>
+</ul>
+</li>
+<li><p>EXP(n), LN, LOG</p>
+<ul>
+<li>EXP(n)은 지수함수로 n제곱 값을 반환</li>
+<li>LN은 자연로그 함수로 밑수가 e인 로그 함수</li>
+<li>LOG는 n2를 밑수로 하는 n1의 로그 값을 반환</li>
+</ul>
+</li>
+</ul>
+<p><strong>문자함수</strong></p>
+<ul>
+<li><p>CONCAT(char1,char2)</p>
+<ul>
+<li>‘||’ 연산자처럼 두 문자를 합쳐줌</li>
+<li>CONCAT(’I Have’, ‘ A Dream’) &#x3D; ‘I Have A Dream’</li>
+</ul>
+</li>
+<li><p>SUBSTR</p>
+<ul>
+<li>문자 개수 단위로 문자열 자름</li>
+<li>SUBSTR(‘ABCDEFG’,1, 4) &#x3D; ‘ABCD’</li>
+</ul>
+</li>
+<li><p>SUBSTRB</p>
+<ul>
+<li>문자열의 바이트 수만큼 자름</li>
+<li>SUBSTRB(’ABCDEFG’,1,4) &#x3D; ‘ABCD’</li>
+</ul>
+</li>
+<li><p>LTRIM(char,set), RTRIM(char,set)</p>
+<ul>
+<li>LTRIM은 char 문자열에서 set으로 지정된 문자열을 왼쪽 끝에서 제거한 후 나머지 문자열 반환</li>
+<li>RTRIM은 반대로 오른쪽 끝에서 제거한 뒤 나머지 문자열 반환</li>
+<li>set은 생략 가능</li>
+<li>LTRIM(‘가나다라’, ‘가’) &#x3D; 나다라</li>
+<li>RTRIM(’가나다라’,’라’) &#x3D; 가나다</li>
+<li>보통 양 끝에 있는 공백을 제거할 때 자주 사용</li>
+</ul>
+</li>
+<li><p>LPAD, RPAD</p>
+<ul>
+<li>LPAD는 매개변수로 들어온 문자열을 n자리만큼 왼쪽부터 채워 추가된 문자열을 반환</li>
+<li>RPAD는 오른쪽에 해당 문자열을 채워 반환</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">CREATE</span> <span class="variable constant_">TABLE</span> <span class="title function_">ex4_1</span>(</span><br><span class="line">    phone_num <span class="title function_">VARCHAR</span>(<span class="number">30</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="variable constant_">INSERT</span> <span class="variable constant_">INTO</span> ex4_1 <span class="title function_">VALUES</span>(<span class="string">&#x27;111-1111&#x27;</span>);</span><br><span class="line"><span class="variable constant_">INSERT</span> <span class="variable constant_">INTO</span> ex4_1 <span class="title function_">VALUES</span>(<span class="string">&#x27;111-2222&#x27;</span>);</span><br><span class="line"><span class="variable constant_">INSERT</span> <span class="variable constant_">INTO</span> ex4_1 <span class="title function_">VALUES</span>(<span class="string">&#x27;111-33333&#x27;</span>);</span><br><span class="line"><span class="variable constant_">SELECT</span> * <span class="variable constant_">FROM</span> ex4_1;</span><br><span class="line"></span><br><span class="line"><span class="variable constant_">SELECT</span> <span class="title function_">LPAD</span>(phone_num,<span class="number">12</span>,<span class="string">&#x27;(02)&#x27;</span>) <span class="variable constant_">FROM</span> ex4_1;  # (<span class="number">02</span>)<span class="number">111</span>-<span class="number">1111</span> ...</span><br><span class="line"></span><br><span class="line"><span class="variable constant_">SELECT</span> <span class="title function_">RPAD</span>(phone_num,<span class="number">12</span>,<span class="string">&#x27;(02)&#x27;</span>) <span class="variable constant_">FROM</span> ex4_1;  # <span class="number">111</span>-<span class="number">1111</span>(02_ ...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>REPLACE(char, search_str, replace_str)</p>
+<ul>
+<li>문자열에서 바꿀 문자열을 찾아, 바꾸려는 문자열로 대체하는 것</li>
+</ul>
+</li>
+<li><p>TRANSLATE(expr, FROM_str, to_str)</p>
+<ul>
+<li>replace와 비슷하지만 translate은 문자열 자체가 아닌 한 글잤기 매핑해 바꾼 결과를 반환</li>
+</ul>
+</li>
+</ul>
+<p><strong>날짜함수</strong></p>
+<ul>
+<li>SYSDATE, SYSTIMESTAMP<ul>
+<li>현재 일자를 알려줌 &#x2F; 현재 일자와 시간을 알려줌</li>
+</ul>
+</li>
+<li>ADD_MONTHS( date, integer)<ul>
+<li>매개변수로 들어온 날짜에 integer만큼의 월을 더한 날짜를 반환</li>
+</ul>
+</li>
+<li>MONTHS_BETWEEN(date1, date2)<ul>
+<li>두 날짜 사이의 개월 수를 반환</li>
+</ul>
+</li>
+<li>LAST_DAY(date)<ul>
+<li>date 날짜를 기준으로 해당 월의 마지막 일자를 반환</li>
+</ul>
+</li>
+<li>ROUND(date, format), TRUNC(date, format)<ul>
+<li>ROUND는 format에 따라 반올림한 날짜를 , TRUNC는 잘라낸 날짜를 반환</li>
+</ul>
+</li>
+<li>NEXT_DAT(date, char)<ul>
+<li>date를 char에 명시한 날짜로 다음 주 주중 일자를 반환</li>
+</ul>
+</li>
+</ul>
+<p><strong>변환함수</strong></p>
+<ul>
+<li><p>서로 다른 유형의 데이터 타입으로 변환해 결과를 반환하는 함수</p>
+</li>
+<li><p>TO_CHAR(숫자 혹은 날짜, format)</p>
+<ul>
+<li>숫자나 날짜를 문자로 변환해 주는 하무</li>
+<li>날짜 변환 형식</li>
+</ul>
+<p>  <img src="/images/SQL_basic/Untitled.png" alt="Untitled"></p>
+</li>
+</ul>
+<p><img src="/images/SQL_basic/Untitled%201.png" alt="Untitled"></p>
+<ul>
+<li>숫자 변환 형식</li>
+</ul>
+<p><img src="/images/SQL_basic/Untitled%202.png" alt="Untitled"></p>
+<ul>
+<li>TO_NUMBER<ul>
+<li>문자나 다른 유형의 숫자를 NUMBER형으로 변환하는 함수</li>
+</ul>
+</li>
+<li>TO_DATE (char, format), TO_TIMESTAMP (char, format)<ul>
+<li>문자를 날짜형으로 변환하는 함수</li>
+<li>TO_DATE는 DATE형으로 TO_TIMESTAMP는 TIMESTAMP형으로 변환</li>
+</ul>
+</li>
+</ul>
+<p><strong>NULL 관련 함수</strong></p>
+<ul>
+<li><p>NVL(expr1, expr2), NVL2((expr1, expr2, expr3))</p>
+<ul>
+<li>NVL 함수는 expr1이 NULL일 때 expr2를 반환한다</li>
+<li>NVL2 함수는 NVL을 확장한 함수로 expr1이 NULL 이 아니면 expr2를,  NULL이면 expr3을 반환하는 함수이다</li>
+<li>커미션이 NULL인 사원은 그냥 급여를  NULL이 아닌 사원은 급여 + (급여 * 커미션)을 조회하는 쿼리</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> employee_id,</span><br><span class="line">			<span class="title class_">NVL2</span>(commission_pct, salary + (salary * commission_pct),salary) <span class="variable constant_">AS</span> salary2</span><br><span class="line"><span class="variable constant_">FROM</span> employees;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>COALESCE (expr1, expr2..)</p>
+<ul>
+<li>매개변수로 들어오는 표현식에서 NULL이 아닌 첫번째 표현식을 반환하는 함수</li>
+<li>급여 * 커미션 값이 NULL이면 salary를, NULL 이 아니면 급여 * 커미션을 반환하는 쿼리</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> employee_id, salary, commission_pct,</span><br><span class="line">			<span class="variable constant_">COALESCE</span> (salary * commission_pct, salary) <span class="variable constant_">AS</span> salary2</span><br><span class="line"><span class="variable constant_">FROM</span> employees;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LNNVL (조건식)</p>
+<ul>
+<li>매개변수로 들어오는 조건식의 결과가 FALSE나 UNKNOWN이면 TRUE를, TRUE이면 FALSE를 반환한다</li>
+<li>커미션이 0.2이하인 사원 조회 (null도 포함하여)</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> <span class="title function_">COUNT</span>(*)</span><br><span class="line">	<span class="variable constant_">FORM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> <span class="title function_">LNNVL</span>(commission_pct &gt;= <span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NULLIF (expr1, expr2)</p>
+<ul>
+<li>expr1과 expr2를 비교해 같으면 NULL을 같지 않으면 expr1을 반환한다</li>
+<li>job_history 테이블에서 start_date와 end_date의 연도만 추출해 두 연도가 같으면 NULL을, 같지 않으면 종료 년도를 출력하는 쿼리</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SEELECT</span> employee_id</span><br><span class="line">				,<span class="title function_">TO_CHAR</span>(start_date,<span class="string">&#x27;YYYY&#x27;</span>)start_year</span><br><span class="line">				,<span class="title function_">TO_CHAR</span>(end_date, <span class="string">&#x27;YYYY&#x27;</span>) end_year</span><br><span class="line">				, <span class="title function_">NULLIF</span>(<span class="title function_">TO_CHAR</span>(end_date, <span class="string">&#x27;YYYY&#x27;</span>), <span class="title function_">TO_CHAR</span>(start_date, <span class="string">&#x27;YYYY&#x27;</span>)) nullif_year</span><br><span class="line"><span class="variable constant_">FROM</span> job_history; </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>기타 함수</strong></p>
+<ul>
+<li>GREATEST(expr1, expr2…), LEAST(expr1, expr2…)<ul>
+<li>GREATEST는 매개변수로 들어오는 표현식에서 가장 큰 값을, LEAST는 가장 작은 값을 반환하는 함수</li>
+</ul>
+</li>
+<li>DECODE(expr, search1, result1, search2, result2, …, default)<ul>
+<li>expr과 search1을 비교해 두 값이 같으면 result1을 , 같지 않으면 다시 search2와 비교해 값이 같으면 result2를 반환… 이런 식으로 계속 비교한 뒤 최종적으로 같은 값이 없으면 default 값을 반환</li>
+</ul>
+</li>
+</ul>
+<h3 id="그룹-쿼리"><a href="#그룹-쿼리" class="headerlink" title="그룹 쿼리"></a>그룹 쿼리</h3><ul>
+<li><p>COUNT (expr)</p>
+<ul>
+<li>전체 로우 혹은 조건으로 걸러진 로우 수를 반환하는 집계 함수</li>
+<li>대부분은 COUNT(*) 형태로 사용하는데 *에 컬럼명을 넣기도 함</li>
+<li>또한 COUNT함수는 매개변수가 NULL이 아닌 건에 대해서만 로우의 수를 반환</li>
+<li>앞에 DISTINCT를 붙이면 컬럼에 있는 유일한 값만 조회됨</li>
+</ul>
+</li>
+<li><p>SUM (expr)</p>
+<ul>
+<li>전체 합계를 반환하는 함수</li>
+<li>COUNT와 마찬가지로 DISTINCT를 쓸 수 있음</li>
+</ul>
+</li>
+<li><p>AVG (expr)</p>
+<ul>
+<li>매개변수의 평균값을 반환하는 함수</li>
+</ul>
+</li>
+<li><p>MIN(expr), MAX(expr)</p>
+<ul>
+<li>각각 최솟값과 최댓값을 반환</li>
+<li>DISTINCT를 사용할 수는 있지만 각각 최솟값과 최댓값을 반환하므로 굳이 DISTINCT를 사용할 필요는 없음</li>
+</ul>
+</li>
+<li><p>VARIANCE(expr), STDDEV(expr)</p>
+<ul>
+<li>VARIANCE 는 분산을, STDDEV는 표준편차를 구해 반환하는 함수</li>
+</ul>
+</li>
+<li><p>GROUP BY 절과 HAVING절</p>
+<ul>
+<li>특정 그룹으로 묶어 데이터를 집계해주는 함수</li>
+<li>WHERE와 ORDER BY절 사이에 위치함</li>
+<li>사원테이블의 각 부서별 급여 총액 구하기</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> department_id, <span class="title function_">SUM</span>(salary)</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> department_id</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> department_id;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>HAVING절은 GROUP BY 절 다음에 위치해 GROUP BY한 결과를 대상으로 다시 필터를 거는 역할</li>
+<li>2013년 지역별 가계 대출 총 잔액에서 대출 잔액이 100조 이상인 건만 추출하기</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> period, region, <span class="title function_">SUM</span>(loan_jan_amt) totl_jan</span><br><span class="line"><span class="variable constant_">FROM</span> kor_loan_status</span><br><span class="line"><span class="variable constant_">WHERE</span> period = <span class="string">&#x27;201311&#x27;</span></span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> period, region</span><br><span class="line"><span class="variable constant_">HAVING</span> <span class="title function_">SUM</span>(loan_jan_amt) &gt; <span class="number">100000</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> region;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ROLLUP절과 CUBE절</p>
+<ul>
+<li>둘다 GROUP BY 절에서 사용되며 그룹별 소계를 추가로 보여주는 역할을 함</li>
+<li>ROLLUP은 expr로 명시한 표현식을 기준으로 집계한 결과, 즉 추가적인 집계 정보를 보여줌</li>
+<li>2013년도 대출 종류별 총 잔액에 롤업 적용 →</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> period, gubun, <span class="title function_">SUM</span>(loan_jan_amt) totl_jan</span><br><span class="line"><span class="variable constant_">FROM</span> kor_loan_status</span><br><span class="line"><span class="variable constant_">WHERE</span> period <span class="variable constant_">LIKE</span> <span class="string">&#x27;2013%&#x27;</span></span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> period, gubun</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> <span class="title function_">ROLLUP</span>(period, gubun);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>CUBE는 rollup이 레벨별로 순차적 집계를 한 반면, 명시한 표현식 개수에 따라 가능한 모든 조합별로 집계한 결과를 반환한다<ul>
+<li>CUBE는 2의 제곱(expr 수) 만큼 종류별로 집계 된다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="집합연산자"><a href="#집합연산자" class="headerlink" title="집합연산자"></a>집합연산자</h3><ul>
+<li>UNION<ul>
+<li>합집한을 의미 → 데이터 집합 각각의 집합 원소를 모두 포함한 결과가 반환됨</li>
+</ul>
+</li>
+<li>UNION ALL<ul>
+<li>UNION과 비슷한데 중복된 항목도 모두 조회해주는 함수</li>
+</ul>
+</li>
+<li>INTERSECT<ul>
+<li>교집합을 의미 → 데이터 집합에서 공통된 항목만을 추출</li>
+</ul>
+</li>
+<li>MINUS<ul>
+<li>차집합을 의미 → 한 데이터 집합을 기준으로 다른 데이터 집합과 겹치는 항목을 제외하여 결과를 추출</li>
+</ul>
+</li>
+</ul>
+<h3 id="조인"><a href="#조인" class="headerlink" title="조인"></a>조인</h3><p><strong>내부조인과 외부조인</strong></p>
+<ul>
+<li><p>동등조인</p>
+<ul>
+<li>WHERE절에서 등호 연산자를 사용해 2개 이상의 테이블이나 뷰를 연결한 조인</li>
+<li>A와 B 테이블 사이에서 공통된 값을 가진 컬럼의 행을 추출</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    a.<span class="property">employee_id</span></span><br><span class="line">    , a.<span class="property">emp_name</span></span><br><span class="line">    , a.<span class="property">department_id</span></span><br><span class="line">    , b.<span class="property">department_name</span></span><br><span class="line"><span class="variable constant_">FROM</span></span><br><span class="line">    employees a</span><br><span class="line">    , departments b</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="property">department_id</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>EXISTS</p>
+<ul>
+<li>서브 쿼리를 사용해 서브 쿼리에 존재하는 데이터만 메인 쿼리에서 추출하는 조인 방법</li>
+<li>B 테이블에 존재하는 A 테이블의 데이터를 추출</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    department_id</span><br><span class="line">    , department_name</span><br><span class="line"><span class="variable constant_">FROM</span> departments a</span><br><span class="line"><span class="variable constant_">WHERE</span> <span class="variable constant_">EXISTS</span> (<span class="variable constant_">SELECT</span> * </span><br><span class="line">              <span class="variable constant_">FROM</span> employees b</span><br><span class="line">              <span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="property">department_id</span></span><br><span class="line">               <span class="variable constant_">AND</span> b.<span class="property">salary</span> &gt; <span class="number">3000</span></span><br><span class="line">              ) --- <span class="variable constant_">EXISTS</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> a.<span class="property">department_name</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IN</p>
+<ul>
+<li>서브 쿼리 내에 두 테이블의 조인 조건이 없다</li>
+<li>IN 연산자는 OR 조건을 반환 가능</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    department_id</span><br><span class="line">    , department_name</span><br><span class="line"><span class="variable constant_">FROM</span> departments a</span><br><span class="line"><span class="variable constant_">WHERE</span>  a.<span class="property">department_id</span> <span class="variable constant_">IN</span> (<span class="variable constant_">SELECT</span></span><br><span class="line">                            b.<span class="property">department_id</span></span><br><span class="line">                            <span class="variable constant_">FROM</span> employees b</span><br><span class="line">                            <span class="variable constant_">WHERE</span> b.<span class="property">salary</span> &gt; <span class="number">3000</span>)</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> a.<span class="property">department_name</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>외부조인</p>
+<ul>
+<li>(+) 기호를 붙이는 형식</li>
+<li>조인 조건에 만족하지 않더라도 데이터를 모두 추출함 (없으면 null값으로 출력)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    a.<span class="property">department_id</span></span><br><span class="line">    , a.<span class="property">department_name</span></span><br><span class="line">    , b.<span class="property">job_id</span></span><br><span class="line">    , b.<span class="property">department_id</span></span><br><span class="line"><span class="variable constant_">FROM</span> departments a</span><br><span class="line">    , job_history b</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="title function_">department_id</span>(+);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>외부조인 시 조인 조건 모두에 (+)를 붙여야 함</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    a.<span class="property">employee_id</span></span><br><span class="line">    , a.<span class="property">emp_name</span></span><br><span class="line">    , b.<span class="property">job_id</span></span><br><span class="line">    , b.<span class="property">department_id</span></span><br><span class="line"><span class="variable constant_">FROM</span></span><br><span class="line">    employees a</span><br><span class="line">    , job_history b</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">employee_id</span> = b.<span class="title function_">employee_id</span>(+)</span><br><span class="line"> <span class="variable constant_">AND</span> a.<span class="property">department_id</span> = b.<span class="title function_">department_id</span>(+);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/SQL_basic/Untitled%203.png" alt="Untitled"></p>
+<ul>
+<li>카타시안 조인<ul>
+<li>WHERE절에 조인 조건이 없는 조인 방식</li>
+<li>FROM절에 2개 이상 테이블을 명시했으므로 일종의 조인 조건</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    a.<span class="property">employee_id</span></span><br><span class="line">    , a.<span class="property">emp_name</span></span><br><span class="line">    , a.<span class="property">hire_date</span></span><br><span class="line">    , b.<span class="property">department_id</span></span><br><span class="line">    , b.<span class="property">department_name</span></span><br><span class="line"><span class="variable constant_">FROM</span></span><br><span class="line">    employees a</span><br><span class="line">    , departments b</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="property">department_id</span></span><br><span class="line">    <span class="variable constant_">AND</span> a.<span class="property">hire_date</span> &gt;= <span class="title function_">TO_DATE</span>(<span class="string">&#x27;2003-01-01&#x27;</span>,<span class="string">&#x27;YYYY-MM-DD&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>ANSI 조인</strong></p>
+<ul>
+<li>조인 조건이 WHERE 절이 아닌 FROM 절에 들어간다는 점이 기존 문법과 다름</li>
+<li>FROM 절에서 INNER JOIN 구문을 사용하며, 조인 조건은 ON 절에 , 조인 조건 외의 조건은 기존대로 WHERE 절에 명시</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    a.<span class="property">employee_id</span></span><br><span class="line">    , a.<span class="property">emp_name</span></span><br><span class="line">    , a.<span class="property">hire_date</span></span><br><span class="line">    , b.<span class="property">department_id</span></span><br><span class="line">    , b.<span class="property">department_name</span></span><br><span class="line"><span class="variable constant_">FROM</span></span><br><span class="line">    employees a</span><br><span class="line"><span class="variable constant_">INNER</span> <span class="variable constant_">JOIN</span> departments b</span><br><span class="line">    <span class="variable constant_">ON</span> (a.<span class="property">department_id</span> = b.<span class="property">department_id</span>)</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">hire_date</span> &gt;= <span class="title function_">TO_DATE</span>(<span class="string">&#x27;2003-01-01&#x27;</span>,<span class="string">&#x27;YYYY-MM-DD&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="서브쿼리"><a href="#서브쿼리" class="headerlink" title="서브쿼리"></a>서브쿼리</h3><ul>
+<li><p>연관성 없는 서브 쿼리</p>
+<ul>
+<li>메인 쿼리와의 연관성이 없는 서브쿼리를 말한다</li>
+<li>메인 테이블과 조인 조건이 걸리지 않는 서브쿼리</li>
+<li>메인 쿼리: 모든 사원 테이블을 조회하라 &#x2F; 서브 : 사원 테이블의 평균 급여보다 많은 사원</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> *</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> salary &gt;= (<span class="variable constant_">SELECT</span> <span class="title function_">AVG</span>(salary) <span class="variable constant_">FROM</span> employees);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>parent_id 가 null인 부서번호를 가진 총 사원의 건수</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> <span class="title function_">count</span>(*)</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> department_id <span class="variable constant_">IN</span> (<span class="variable constant_">SELECT</span> department_id</span><br><span class="line">                        <span class="variable constant_">FROM</span> departments</span><br><span class="line">                        <span class="variable constant_">WHERE</span> parent_id <span class="variable constant_">IS</span> <span class="variable constant_">NULL</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>연관성이 있는 서브 쿼리</p>
+<ul>
+<li>메인쿼리와의 연관성이 있는 서브 쿼리</li>
+<li>메인 테이블과 조인 조건이 걸린 서브 쿼리</li>
+<li>메인: 부서 번호를 조회하라 &#x2F; 서브 : 부서테이블의 부서번호와 job_history 테이블의 부서 번호가 같은 경우를 조회하라</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    a.<span class="property">department_id</span> </span><br><span class="line">    , a.<span class="property">department_name</span></span><br><span class="line"><span class="variable constant_">FROM</span> departments a</span><br><span class="line"><span class="variable constant_">WHERE</span> <span class="title function_">EXISTS</span>(<span class="variable constant_">SELECT</span> <span class="number">1</span> </span><br><span class="line">             <span class="variable constant_">FROM</span> job_history b</span><br><span class="line">             <span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="property">department_id</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>두 개의 서브쿼리(중첩 쿼리) 사용</p>
+</li>
+<li><p>연관성 없는 서브쿼리 :평균 급여를 구하고 이 값보다 큰 급여의 사원을 조회</p>
+<p>  연관성 있는 서브쿼리: 평균급여 이상을 받는 사원이 속한 부서를 추출</p>
+</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> a.<span class="property">department_id</span>, a.<span class="property">department_name</span></span><br><span class="line"><span class="variable constant_">FROM</span> departments a</span><br><span class="line"><span class="variable constant_">WHERE</span> <span class="variable constant_">EXISTS</span> (<span class="variable constant_">SELECT</span> <span class="number">1</span></span><br><span class="line">              <span class="variable constant_">FROM</span> employees b</span><br><span class="line">              <span class="variable constant_">WHERE</span> a.<span class="property">department_id</span> = b.<span class="property">department_id</span></span><br><span class="line">                <span class="variable constant_">AND</span> b.<span class="property">salary</span> &gt; (<span class="variable constant_">SELECT</span> <span class="title function_">AVG</span>(salary)</span><br><span class="line">                                <span class="variable constant_">FROM</span> employees)</span><br><span class="line">            );</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>인라인 뷰</p>
+<ul>
+<li><p>FROM절에 사용하는 서브 쿼리</p>
+</li>
+<li><p>2000년 이탈리아 평균 매출액(연평균)보다 큰 월의 평균 매출액 구하기</p>
+<ul>
+<li>서브 1 : 월별 평균 매출액 구하는 것</li>
+<li>서브 2 : 연평균 매출액을 구하는 것</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> a.*</span><br><span class="line"><span class="variable constant_">FROM</span> (<span class="variable constant_">SELECT</span> a.<span class="property">sales_month</span>, <span class="title function_">ROUND</span>(<span class="title function_">AVG</span>(a.<span class="property">amount_sold</span>)) <span class="variable constant_">AS</span> month_avg</span><br><span class="line">      <span class="variable constant_">FROM</span> sales a, customers b, countries c</span><br><span class="line">      <span class="variable constant_">WHERE</span> a.<span class="property">sales_month</span> <span class="variable constant_">BETWEEN</span> <span class="string">&#x27;200001&#x27;</span> <span class="variable constant_">AND</span> <span class="string">&#x27;200012&#x27;</span></span><br><span class="line">       <span class="variable constant_">AND</span> a.<span class="property">cust_id</span> = b.<span class="property">CUST_ID</span></span><br><span class="line">       <span class="variable constant_">AND</span> b.<span class="property">COUNTRY_ID</span> = c.<span class="property">COUNTRY_ID</span></span><br><span class="line">       <span class="variable constant_">AND</span> c.<span class="property">COUNTRY_NAME</span> = <span class="string">&#x27;Italy&#x27;</span></span><br><span class="line">      <span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> a.<span class="property">sales_month</span>) a</span><br><span class="line">      , (<span class="variable constant_">SELECT</span> <span class="title function_">ROUND</span>(<span class="title function_">AVG</span>(a.<span class="property">amount_sold</span>)) <span class="variable constant_">AS</span> year_avg</span><br><span class="line">         <span class="variable constant_">FROM</span> sales a</span><br><span class="line">            , customers b</span><br><span class="line">            , countries c</span><br><span class="line">         <span class="variable constant_">WHERE</span> a.<span class="property">sales_month</span> <span class="variable constant_">BETWEEN</span> <span class="string">&#x27;20001&#x27;</span> <span class="variable constant_">AND</span> <span class="string">&#x27;200012&#x27;</span></span><br><span class="line">          <span class="variable constant_">AND</span> a.<span class="property">cust_id</span> = b.<span class="property">CUST_ID</span></span><br><span class="line">          <span class="variable constant_">AND</span> b.<span class="property">COUNTRY_ID</span> = c.<span class="property">COUNTRY_ID</span></span><br><span class="line">          <span class="variable constant_">AND</span> c.<span class="property">COUNTRY_NAME</span> = <span class="string">&#x27;Italy&#x27;</span> ) b</span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">month_avg</span> &gt; b.<span class="property">year_avg</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>ERD를 통해 도식화해서 보는 것을 추천</p>
+<ul>
+<li>ERD : 데이터베이스 구조를 한 눈에 알아보기 위해</li>
+</ul>
+</li>
+</ul>
+<h3 id="고급-쿼리"><a href="#고급-쿼리" class="headerlink" title="고급 쿼리"></a>고급 쿼리</h3><ul>
+<li>복잡한 연산 결과를 추출해 내는 쿼리</li>
+<li>작성법<ul>
+<li>(1),(2) 메인쿼리 작성</li>
+<li>(3),(4) 서브쿼리 작성 후 합치기</li>
+<li>이탈리아 매출액 데이터에서 연도별 매출 실적이 가장 많은 사원의 목록과 최대 매출액<ul>
+<li>이탈리아 고객 찾기 —&gt; customers, countries country_id로 조인</li>
+<li>이탈리아 매출액 찾기 —&gt; 위의 결과와 sales 테이블을 cust_id 로 조인</li>
+<li>최대 매출액은 MAX, 연도별은 GROUP BY로</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># (<span class="number">1</span>)</span><br><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>) <span class="keyword">as</span> years</span><br><span class="line">    , a.<span class="property">employee_id</span></span><br><span class="line">    , <span class="title function_">SUM</span>(a.<span class="property">amount_sold</span>) <span class="variable constant_">AS</span> amount_sold</span><br><span class="line"><span class="variable constant_">FROM</span> </span><br><span class="line">    sales a</span><br><span class="line">    , customers b </span><br><span class="line">    , countries c </span><br><span class="line"><span class="variable constant_">WHERE</span> a.<span class="property">cust_id</span> = b.<span class="property">cust_id</span></span><br><span class="line">    <span class="variable constant_">AND</span> b.<span class="property">country_id</span> = c.<span class="property">country_id</span> </span><br><span class="line">    <span class="variable constant_">AND</span> c.<span class="property">country_name</span> = <span class="string">&#x27;Italy&#x27;</span> </span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>), a.<span class="property">employee_id</span>;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># (<span class="number">2</span>) </span><br><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    years</span><br><span class="line">    , <span class="title function_">MAX</span>(amount_sold) <span class="variable constant_">AS</span> max_sold</span><br><span class="line">    , <span class="title function_">MIN</span>(amount_sold) <span class="variable constant_">AS</span> min_sold</span><br><span class="line"><span class="variable constant_">FROM</span> (<span class="variable constant_">SELECT</span> </span><br><span class="line">        <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>) <span class="keyword">as</span> years</span><br><span class="line">        , a.<span class="property">employee_id</span></span><br><span class="line">        , <span class="title function_">SUM</span>(a.<span class="property">amount_sold</span>) <span class="variable constant_">AS</span> amount_sold</span><br><span class="line">      <span class="variable constant_">FROM</span> </span><br><span class="line">        sales a</span><br><span class="line">        , customers b </span><br><span class="line">        , countries c </span><br><span class="line">      <span class="variable constant_">WHERE</span> a.<span class="property">cust_id</span> = b.<span class="property">cust_id</span></span><br><span class="line">        <span class="variable constant_">AND</span> b.<span class="property">country_id</span> = c.<span class="property">country_id</span> </span><br><span class="line">        <span class="variable constant_">AND</span> c.<span class="property">country_name</span> = <span class="string">&#x27;Italy&#x27;</span> </span><br><span class="line">      <span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>), a.<span class="property">employee_id</span>) K </span><br><span class="line"><span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> years</span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> years;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># (<span class="number">1</span>) + (<span class="number">2</span>)</span><br><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    emp.<span class="property">years</span></span><br><span class="line">    , emp.<span class="property">employee_id</span></span><br><span class="line">    , emp2.<span class="property">emp_name</span></span><br><span class="line">    , emp.<span class="property">amount_sold</span></span><br><span class="line"><span class="variable constant_">FROM</span> </span><br><span class="line">    (<span class="variable constant_">SELECT</span> </span><br><span class="line">        <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>) <span class="keyword">as</span> years</span><br><span class="line">        , a.<span class="property">employee_id</span></span><br><span class="line">        , <span class="title function_">SUM</span>(a.<span class="property">amount_sold</span>) <span class="variable constant_">AS</span> amount_sold</span><br><span class="line">     <span class="variable constant_">FROM</span> </span><br><span class="line">        sales a</span><br><span class="line">        , customers b </span><br><span class="line">        , countries c </span><br><span class="line">     <span class="variable constant_">WHERE</span> a.<span class="property">cust_id</span> = b.<span class="property">cust_id</span></span><br><span class="line">        <span class="variable constant_">AND</span> b.<span class="property">country_id</span> = c.<span class="property">country_id</span> </span><br><span class="line">        <span class="variable constant_">AND</span> c.<span class="property">country_name</span> = <span class="string">&#x27;Italy&#x27;</span> </span><br><span class="line">     <span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>), a.<span class="property">employee_id</span>) emp</span><br><span class="line">    , (<span class="variable constant_">SELECT</span> </span><br><span class="line">         years</span><br><span class="line">         , <span class="title function_">MAX</span>(amount_sold) <span class="variable constant_">AS</span> max_sold</span><br><span class="line">         , <span class="title function_">MIN</span>(amount_sold) <span class="variable constant_">AS</span> min_sold</span><br><span class="line">         <span class="variable constant_">FROM</span> (<span class="variable constant_">SELECT</span> </span><br><span class="line">                 <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>) <span class="keyword">as</span> years</span><br><span class="line">                 , a.<span class="property">employee_id</span></span><br><span class="line">                 , <span class="title function_">SUM</span>(a.<span class="property">amount_sold</span>) <span class="variable constant_">AS</span> amount_sold</span><br><span class="line">               <span class="variable constant_">FROM</span> </span><br><span class="line">                sales a</span><br><span class="line">                , customers b </span><br><span class="line">                , countries c </span><br><span class="line">               <span class="variable constant_">WHERE</span> a.<span class="property">cust_id</span> = b.<span class="property">cust_id</span></span><br><span class="line">                  <span class="variable constant_">AND</span> b.<span class="property">country_id</span> = c.<span class="property">country_id</span> </span><br><span class="line">                  <span class="variable constant_">AND</span> c.<span class="property">country_name</span> = <span class="string">&#x27;Italy&#x27;</span> </span><br><span class="line">               <span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> <span class="title function_">SUBSTR</span>(a.<span class="property">sales_month</span>, <span class="number">1</span>, <span class="number">4</span>), a.<span class="property">employee_id</span>) K </span><br><span class="line">         <span class="variable constant_">GROUP</span> <span class="variable constant_">BY</span> years) sale</span><br><span class="line">    , employees emp2</span><br><span class="line"><span class="variable constant_">WHERE</span> emp.<span class="property">years</span> = sale.<span class="property">years</span></span><br><span class="line">    <span class="variable constant_">AND</span> emp.<span class="property">amount_sold</span> = sale.<span class="property">max_sold</span></span><br><span class="line">    <span class="variable constant_">AND</span> emp.<span class="property">employee_id</span> = emp2.<span class="property">employee_id</span></span><br><span class="line"><span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> years;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="분석함수"><a href="#분석함수" class="headerlink" title="분석함수"></a>분석함수</h3><ul>
+<li><p>그룹 별 집계를 담당</p>
+</li>
+<li><p>종류</p>
+<ul>
+<li>WINDOW 절 : 파티션으로 분할된 그룹에 대해서 더 상세한 그룹으로 분할할 때 사용</li>
+<li>ORDER BY 절 : 파티션 안에서의 순서를 지정</li>
+<li>PARTITION BY 절 : 분석함수로 계산될 대상 로우의 그룹을 지정</li>
+</ul>
+</li>
+<li><p>ROW_NUMBER()</p>
+<ul>
+<li>파티션으로 분할된 그룹별 각 로우에 대한 순번을 반환하는 함수</li>
+<li>사원 테이블에서 부서별 사원들의 로우 수 출력</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span></span><br><span class="line">    department_id</span><br><span class="line">    , emp_name</span><br><span class="line">    , <span class="title function_">ROW_NUMBER</span>() <span class="variable constant_">OVER</span> (<span class="variable constant_">PARTITION</span> <span class="variable constant_">BY</span> department_id </span><br><span class="line">                         <span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> emp_name) dep_rows</span><br><span class="line"><span class="variable constant_">FROM</span> employees;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RANK(), DENSE_RANK()</p>
+<ul>
+<li>파티션별 순위 반환</li>
+<li>부서별로 급여 순위 매기기</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    department_id</span><br><span class="line">    , emp_name</span><br><span class="line">    , salary</span><br><span class="line">    , <span class="title function_">RANK</span>() <span class="variable constant_">OVER</span> (<span class="variable constant_">PARTITION</span> <span class="variable constant_">BY</span> department_id</span><br><span class="line">                    <span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> salary) dep_rank</span><br><span class="line">    , <span class="title function_">DENSE_RANK</span>() <span class="variable constant_">OVER</span> (<span class="variable constant_">PARTITION</span> <span class="variable constant_">BY</span> department_id</span><br><span class="line">                    <span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> salary) dep_denserank</span><br><span class="line"><span class="variable constant_">FROM</span> employees;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CUME_DIST &amp; PERCENT_RANK</p>
+<ul>
+<li>CUME_DIST : 주어진 그룹에대한 상대 누적 분포도값 반환</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span>  </span><br><span class="line">    department_id</span><br><span class="line">    , emp_name</span><br><span class="line">    , <span class="title function_">CUME_DIST</span>() over (<span class="variable constant_">PARTITION</span> <span class="variable constant_">BY</span> department_id</span><br><span class="line">                        <span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> salary) dep_dist</span><br><span class="line"><span class="variable constant_">FROM</span> employees;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NTILE 함수</p>
+<ul>
+<li>NTILE(4) 값을 4등분 함</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    department_id</span><br><span class="line">    , emp_name</span><br><span class="line">    , salary</span><br><span class="line">    , <span class="title function_">NTILE</span>(<span class="number">5</span>) <span class="variable constant_">OVER</span> (<span class="variable constant_">PARTITION</span> <span class="variable constant_">BY</span> department_id</span><br><span class="line">                     <span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> salary) <span class="variable constant_">NTITLES</span></span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> department_id <span class="variable constant_">IN</span> (<span class="number">30</span>,<span class="number">60</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>LAG 함수 &amp; LEAD 함수</p>
+<ul>
+<li>LAG : 선행 로우의 값 참조</li>
+<li>LEAD : 후행 로우의 값 참조</li>
+</ul>
+  <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> </span><br><span class="line">    emp_name</span><br><span class="line">    , hire_date</span><br><span class="line">    , salary</span><br><span class="line">    , <span class="title function_">LAG</span>(salary, <span class="number">1</span>, <span class="number">0</span>) <span class="variable constant_">OVER</span> (<span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> hire_date) <span class="variable constant_">AS</span> prev_sal</span><br><span class="line">    , <span class="title function_">LEAD</span>(salary, <span class="number">1</span>, <span class="number">0</span>) <span class="variable constant_">OVER</span> (<span class="variable constant_">ORDER</span> <span class="variable constant_">BY</span> hire_date) <span class="variable constant_">AS</span> next_sal</span><br><span class="line"><span class="variable constant_">FROM</span> employees</span><br><span class="line"><span class="variable constant_">WHERE</span> department_id</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="계층형-쿼리"><a href="#계층형-쿼리" class="headerlink" title="계층형 쿼리"></a>계층형 쿼리</h3><ul>
+<li>계층형 구조 : 상하 수직 관계의 구조로 사원-대리-과장-부장&#x2F; 판매부-영업부 같은 구조가 속한다</li>
+<li>또 다른 말로는 부모 컬럼, 자식 컬럼이라고도 표현한다</li>
+<li>계층형 쿼리 구문<ul>
+<li>START WITH 조건 : 최상위 계층의 로우를 식별, 즉 이 조건에 맞는 로우부터 계층형 구조를 풀어나간다는 의미</li>
+<li>CONNECT BY 조건 : 계층형 구조가 어떤식으로 연결되는지를 기술<ul>
+<li><p>부서 테이블은 parent_id 에 상위 부서 정보를 갖고 있음</p>
+<pre><code> → ‘CONNECT BY PRIOR department_id (자식 컬럼) = parent_id (부모 컬럼)’
+</code></pre>
+</li>
+<li><p>CONNECT BY NOCYCLE 은 무한루프를 방지하기 위한 조건</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">SELECT</span> expr1, expr2,...</span><br><span class="line"><span class="variable constant_">FROM</span> 테이블</span><br><span class="line"><span class="variable constant_">WHERE</span> 조건</span><br><span class="line"><span class="variable constant_">START</span> <span class="variable constant_">WITH</span> [최상위 조건]</span><br><span class="line"><span class="variable constant_">CONNECT</span> <span class="variable constant_">BY</span> [<span class="variable constant_">NOCYCLE</span>][<span class="variable constant_">PRIOR</span> 계층형 구조조건];</span><br></pre></td></tr></table></figure>
+
+<h3 id="WITH절"><a href="#WITH절" class="headerlink" title="WITH절"></a>WITH절</h3><ul>
+<li>동일한 구문을 연결시켜줌</li>
+<li>WITH이 맨 앞에 오고 별칭을 앞에 명시한다는 점을 빼고는 일반 서브 쿼리와 비슷함</li>
+<li>형식</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">WITH</span> 별칭<span class="number">1</span> <span class="variable constant_">AS</span> (<span class="variable constant_">SELECT</span>문),</span><br><span class="line">		 별칭<span class="number">2</span> <span class="variable constant_">AS</span> (<span class="variable constant_">SELECT</span>문)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/SQL_basic/Untitled%204.png" alt="Untitled"></p>
+<h3 id="분석함수-1"><a href="#분석함수-1" class="headerlink" title="분석함수"></a>분석함수</h3><ul>
+<li>특정 그룹별 집계를 해주므로 집계함수에 속함</li>
+<li>AVG</li>
+</ul>
+<h3 id="WINDOW-함수"><a href="#WINDOW-함수" class="headerlink" title="WINDOW 함수"></a>WINDOW 함수</h3><ul>
+<li>파티션으로 분할된 그룹에 대해 별도로 다시 그룹(&#x3D;부분집합)을 만드는 역할을 함</li>
+<li>구문 형식<ul>
+<li>ROWS : 로우 단위로 WINDOW절을 지정</li>
+<li>RANGE : 로우가 아닌 논리적인 범위로 WINDOW 절을 지정</li>
+<li>BETWEEN ~ AND : WINDOW 절의 시작과 끝 지점을 명시</li>
+<li>UNBOUNDED PRECEDING : 파티션으로 구분된 첫번째 로우를 시작 지점</li>
+<li>UNBOUNDED FOLLOWING : 파티션으로 구분된 마지막 로우를 끝 지점</li>
+<li>CURRENT ROW : 시작 및 끝 지점이 현재 로우가 됨</li>
+<li>value_expr PRECEDING : 끝 지점일 경우, 시작 지점은 value_expr PRECEDING</li>
+<li>value_expr FOLLOWING : 시작 지점일 경우, 끝 지점은 value_expr FOLLOWING</li>
+</ul>
+</li>
+</ul>
+<p>📌 SQL 책 추천 : 데이터 분석을 위한 SQL 레시피 (한빛 미디어, 가사키 나가토)</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-04-29T12:35:00.000Z" title="2022. 4. 29. 오후 9:35:00">2022-04-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-04-29T12:43:06.859Z" title="2022. 4. 29. 오후 9:43:06">2022-04-29</time></span><span class="level-item"> Oh seungeun </span><span class="level-item"><a class="link-muted" href="/categories/oracle/">oracle</a></span><span class="level-item">7 minutes read (About 1018 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/29/ora_ins/">오라클 설치</a></h1><div class="content"><h1 id="오라클-설치"><a href="#오라클-설치" class="headerlink" title="오라클 설치"></a>오라클 설치</h1><h3 id="오라클-설치-1"><a href="#오라클-설치-1" class="headerlink" title="오라클 설치"></a>오라클 설치</h3><ul>
 <li>오라클 데이터베이스 다운로드 (19c 버전)</li>
 </ul>
 <p>: <a target="_blank" rel="noopener" href="https://www.oracle.com/kr/database/technologies/oracle19c-windows-downloads.html">https://www.oracle.com/kr/database/technologies/oracle19c-windows-downloads.html</a></p>
@@ -104,7 +689,7 @@
 </ul>
 </li>
 </ul>
-</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">2</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/oracle/"><span class="level-start"><span class="level-item">oracle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/settings/"><span class="level-start"><span class="level-item">settings</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T14:06:59.345Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/SQL_basic/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:27:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/virt_set/">파이참 가상환경 세팅</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:24:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/pyc_ins/">파이참 설치</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:03:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/ana_ins/">아나콘다 설치</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-29T12:35:00.000Z">2022-04-29</time></p><p class="title"><a href="/2022/04/29/ora_ins/">오라클 설치</a></p><p class="categories"><a href="/categories/oracle/">oracle</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/oracle/"><span class="tag">oracle</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sql/"><span class="tag">sql</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/crawling/"><span class="level-start"><span class="level-item">crawling</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/oracle/"><span class="level-start"><span class="level-item">oracle</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/settings/"><span class="level-start"><span class="level-item">settings</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T14:11:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/SQL_basic/">SQL basic</a></p><p class="categories"><a href="/categories/oracle/">oracle</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T14:11:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/crawling/">crawling basic</a></p><p class="categories"><a href="/categories/crawling/">crawling</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:27:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/virt_set/">파이참 가상환경 세팅</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:24:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/pyc_ins/">파이참 설치</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-01T04:03:00.000Z">2022-05-01</time></p><p class="title"><a href="/2022/05/01/ana_ins/">아나콘다 설치</a></p><p class="categories"><a href="/categories/settings/">settings</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">May 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">April 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/crawling/"><span class="tag">crawling</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/oracle/"><span class="tag">oracle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sql/"><span class="tag">sql</span><span class="tag">2</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
